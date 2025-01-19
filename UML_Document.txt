@@ -1,0 +1,192 @@
+@startuml
+enum CharacterAttribute {
+    HP
+    Attack
+    Defense
+    Mana
+    Exp
+    Level
+    StatPoint
+}
+
+class Game {
+    - isGameOn : bool
+    + Game()
+    + newGame() : bool
+    + loadGame() : bool
+    + exitGame() : bool
+    + connectToAccount(account: OnlineAccount) : bool
+    + syncWithServer(connection: ServerConnection) : void
+}
+Game ---|> Object
+Game --> OnlineAccount
+Game --> ServerConnection
+Game --> WorldMap
+
+class OnlineAccount {
+    + username : string
+    + email : string
+    + password : string
+    + status : string
+    + login(email: string, password: string) : bool
+    + register(username: string, email: string, password: string) : bool
+    + syncProgress(game: Game) : void
+}
+OnlineAccount --> ServerConnection
+
+class ServerConnection {
+    + serverAddress : string
+    + connect() : bool
+    + disconnect() : void
+    + sendData(data: string) : void
+    + receiveData() : string
+}
+ServerConnection --> OnlineAccount
+
+struct BaseStat {
+    + hp : int
+    + attack : int
+    + defense : int
+    + mana : int
+    + experience : int
+    + level : int
+    + statPoint : int
+    + addStatPoint() : void
+    + allocatePoint(valuePoint: int, indexStat: int) : void
+    + levelUp() : void
+}
+
+class Character {
+    # id : int
+    # name : string
+    # baseStat : BaseStat
+    # backPack : Inventory
+    + Character()
+    + attack(target: Character) : void
+    + useAbility(ability: Ability, target: Character) : void
+}
+Character <|-- Player
+Character <|-- Monster
+Character <|-- NPC
+Character "1" --> "1" BaseStat
+Character "1" --> "1" IconMap
+Character "1" --> "1" Inventory
+Character "1" --> "1" SkillTree
+
+class Item {
+    # id : int
+    # name : string
+    # price : int
+    # weight : float
+    # description : string
+    + Item()
+}
+Item ---|> Object
+
+class Inventory {
+    + lootContainer : list<Item>
+    + addItem(item: Item) : void
+    + removeItem() : void
+    + Inventory(capacity = 0: int)
+}
+Inventory --- Item
+
+struct Vector2D {
+    + x : int
+    + y : int
+    + Vector2D(pozX: int, pozY: int)
+    + setVector2D(pozX: int, pozY: int) : void
+    + getVector2D() : int
+}
+Vector2D ---|> Object
+
+class Object {
+    + point2D : Vector2D
+    + iconMap : IconMap
+    + isVisibleOnMap() : bool
+    + isWalkable() : bool
+}
+Object ---|> WorldMap
+
+class WorldMap {
+    # mapa : vector<Icon>
+    - object : list<Object*>
+    + WorldMap()
+    + drawMap() : void
+    + loadMap(nameLoad: string)
+    + saveMap(nameSave: string)
+    + randomMap() : void
+}
+WorldMap ---|> Object
+WorldMap --> Planet
+
+class Planet {
+    + name : string
+    + resources : list<Item>
+    + creatures : list<Monster>
+    + travelTo(planet: Planet) : void
+}
+Planet "1" --> "many" Monster
+Planet "1" --> "many" Arena
+
+class Arena {
+    + name : string
+    + location : Planet
+    + hostBattle(system: BattleSystem) : void
+}
+
+class BattleSystem {
+    + startPvP(player1: Player, player2: Player) : void
+    + startPvE(player: Player, monster: Monster) : void
+}
+
+class Trainer {
+    + trainCreature(creature: Monster) : void
+}
+
+class Merchant {
+    + buyItem(item: Item) : void
+    + sellItem(item: Item) : void
+}
+
+class UIManager {
+    + manageHUD(hud: HUD) : void
+}
+UIManager --> HUD
+
+class HUD {
+    + displayStats(character: Character) : void
+}
+
+class SkillTree {
+    + abilities : list<Ability>
+    + allocatePoint(skill: Ability) : void
+}
+
+enum CreatureType {
+    Mythical
+    Mechanical
+    Magical
+    Natural
+    Hybrid
+}
+
+class Creature {
+    + type : CreatureType
+    + evolve() : void
+    + learnAbility(ability: Ability) : void
+}
+Creature <|-- Monster
+
+class Ability {
+    + name : string
+    + description : string
+    + execute(target: Character) : void
+}
+SkillTree --> Ability
+
+Trainer --> Monster
+Merchant --> Inventory
+
+BaseStat --> CharacterAttribute
+@enduml

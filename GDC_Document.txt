@@ -1,0 +1,133 @@
+Game Design Document (GDC)
+
+Podstawowe informacje
+
+Tytuł gry: Galactic Monster
+
+Gatunek gry: RPG w czasie rzeczywistym
+
+Platformy: PC
+
+Grupa docelowa: Młodzież i dorośli zainteresowani mitologią, mangą, legendami z różnych krajów oraz strategiami czasu rzeczywistego.
+
+Opis gry: Gracz wciela się w bohatera, który staje do walki, wykorzystując futurystyczne technologie oraz potwory. Może mierzyć się zarówno z innymi graczami, jak i przeciwnikami sterowanymi przez AI. W trakcie rozgrywki gracz może eliminować potwory napotkane na swojej drodze lub stawiać czoło stworzeniom innych graczy. Zwycięża ten, którego potwory pozostaną przy życiu, eliminując przeciwników.
+
+Fabuła i świat gry
+
+Opis świata:
+
+Uniwersum gry łączy mityczne krainy z futurystycznymi technologiami. Gracze odwiedzają rozległe galaktyki, w których znajdują się różnorodne tereny, takie jak magiczne pustkowia czy orbitalne stacje bojowe. Każda lokacja skrywa unikalne wyzwania, sekrety, pułapki oraz wybory moralne wpływające na przebieg dalszej rozgrywki. Gracze mogą podróżować na inne planety, z których każda oferuje nowe stworzenia, zasoby i wyzwania.
+
+Główna fabuła:
+
+Gracz wciela się w bohatera w grze MMO, który dąży do zdobycia sławy i szacunku na swojej planecie. Jego podróż rozpoczyna się od odkrycia starożytnej areny, miejsca legendarnych walk. Bohater zmierzy się z coraz silniejszymi przeciwnikami, rozwijając swoje umiejętności oraz zdolności swoich stworzeń. Jednocześnie będzie zgłębiać tajemnice uniwersum gry, by osiągnąć upragniony cel.
+
+Postacie
+
+Protagonista:
+
+Zdeterminowany poszukiwacz chwały, pragnący zdobyć uznanie i szacunek. W grze online gracz może w pełni spersonalizować swoją postać, wybierając jej wygląd, klasę oraz unikalne umiejętności.
+
+Podstawowe cechy:
+
+Każda postać posiada drzewko rozwoju, umożliwiające graczowi dostosowanie stylu gry do własnych upodobań – od mistrza walki, przez stratega wykorzystującego zaawansowane technologie, po maga władającego potężnymi zaklęciami.
+
+NPC:
+
+Samouczek walki: Wprowadza gracza w podstawy systemu walki, ucząc korzystania z broni, zdolności oraz strategii.
+
+Samouczek łapania stworzeń: Wyjaśnia mechanikę łapania stworzeń oraz ich oswajania.
+
+Samouczek OTP (One-Time Power): Pokazuje, jak efektywnie korzystać z jednorazowych zdolności, które mogą przechylić szalę zwycięstwa.
+
+Sprzedawca, Kowal, Alchemik, Trener stworzeń, Bibliotekarz: Uzupełniają uniwersum gry, oferując przedmioty, usługi i informacje.
+
+Kategorie stworzeń:
+
+Mityczne: Smoki, feniksy, gryfy inspirowane legendami.
+
+Mechaniczne: Roboty, golemy o zaawansowanych zdolnościach technicznych.
+
+Magiczne: Duchy, elementale z unikalnymi zaklęciami.
+
+Naturalne: Zwierzęta i rośliny wzmocnione siłą natury.
+
+Hybrydowe: Połączenie mitologii i technologii, np. cybernetyczne smoki.
+
+System rozwoju stworzeń:
+
+Poziomy: Zwiększanie statystyk.
+
+Ewolucje: Przemiana w potężniejsze formy.
+
+Zdolności: Rozwój unikalnych umiejętności.
+
+Synergia: Współpraca stworzeń w walce.
+
+Mechaniki gry
+
+Styl gry:
+
+Gra w otwartym świecie, z walką w czasie rzeczywistym, rywalizacją PvP oraz eliminacją stworzeń na stałe.
+
+Główne mechaniki:
+
+Walka: Dynamiczne starcia z wykorzystaniem zdolności bohatera i stworzeń.
+
+Rozwój bohatera: Punkty umiejętności inwestowane w drzewko rozwoju.
+
+System przedmiotów: Zbieranie, ulepszanie i tworzenie unikalnych kombinacji.
+
+Unikalne cechy
+
+Podróżowanie między planetami: Każda planeta oferuje inne zasoby, stworzenia i wyzwania.
+
+Hybrydy mitologii i technologii: Połączenie tradycji z futurystycznymi elementami.
+
+Rozbudowany system PvP: Rywalizacja z nagrodami i prestiżem.
+
+Drzewka rozwoju: Zarówno dla bohatera, jak i stworzeń.
+
+Personalizacja i ewolucje: Rozwój i zmiana wyglądu stworzeń.
+
+Dynamiczne wydarzenia: Turnieje, ataki na planety, pojawianie się rzadkich stworzeń.
+
+Wizualizacja i styl
+
+Estetyka: Pixel-art z żywymi kolorami, neonowymi światłami i dynamicznymi efektami wizualnymi. Połączenie motywów mitologicznych z futurystycznymi.
+
+UI/UX:
+
+Intuicyjne menu, z holograficznymi panelami i spójnym głównym ekranem.
+
+Ekrany dostosowujące się do planet.
+
+Dźwięk i muzyka
+
+Oprawa muzyczna: Epickie, instrumentalne utwory dopasowane do lokacji i sytuacji.
+
+Efekty dźwiękowe: Unikalne dźwięki dla stworzeń, broni i technologii.
+
+Technologia
+
+Silnik gry: Unity.
+
+Wymagania: PC: Intel i5, 8GB RAM, GTX 1060. Mobile: Android 8.0 / iOS 12.0, 4GB RAM.
+
+Harmonogram i budżet
+
+Kamienie milowe:
+
+Prototyp (4-8 miesięcy).
+
+Beta (6-12 miesięcy).
+
+Wydanie (24 miesiące).
+
+Kosztorys: Darmowe narzędzia i zasoby.
+
+Wnioski końcowe
+
+Cele: Zbudowanie marki, osiągnięcie 100 000 pobrań w pierwszym roku, zdobycie lojalnej społeczności graczy.
+
+Ryzyka: Problemy z balansem, ograniczone zasoby, implementacja multiplayer, zmiany technologiczne.
